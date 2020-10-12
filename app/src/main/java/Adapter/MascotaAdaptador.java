@@ -1,4 +1,4 @@
-package com.inefop.mascotas;
+package Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.inefop.mascotas.R;
 
 import java.util.ArrayList;
 
@@ -33,7 +35,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         Mascotas mascota = mascotas.get(position);
         mascotasViewHolder.imgFotocv.setImageResource(mascota.getFotomas());
         mascotasViewHolder.tvNombremcv.setText(mascota.getNombre());
-        mascotasViewHolder.tvLikes.setText(String.valueOf(mascota.getLikes()));
+        /*mascotasViewHolder.tvLikes.setText(String.valueOf(mascota.getLikes()));*/
 
     }
 

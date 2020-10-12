@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+
+import Adapter.MascotaAdaptador;
+import Pojo.Mascotas;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void inicializarMascotas(){
 
-        mascotas = new ArrayList<Mascotas>();
+        mascotas = new ArrayList<>();
         mascotas.add(new Mascotas(R.drawable.mascota1,"Lara"));
         mascotas.add(new Mascotas(R.drawable.mascota2,"Mar"));
         mascotas.add(new Mascotas(R.drawable.mascota3,"Mimosa"));
