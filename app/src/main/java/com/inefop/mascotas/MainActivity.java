@@ -1,16 +1,19 @@
 package com.inefop.mascotas;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-public class MainActivity<mascotas> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     ArrayList<Mascotas> mascotas;
     private RecyclerView listaMascotas;
@@ -18,6 +21,9 @@ public class MainActivity<mascotas> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar();
@@ -29,6 +35,25 @@ public class MainActivity<mascotas> extends AppCompatActivity {
         inicializarMascotas();
         inicializarAdaptador();
 
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.mabout:
+            case R.id.contacto:
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setSupportActionBar() {
