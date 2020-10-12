@@ -35,7 +35,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         Mascotas mascota = mascotas.get(position);
         mascotasViewHolder.imgFotocv.setImageResource(mascota.getFotomas());
         mascotasViewHolder.tvNombremcv.setText(mascota.getNombre());
-        /*mascotasViewHolder.tvLikes.setText(String.valueOf(mascota.getLikes()));*/
+        mascotasViewHolder.tvLikes.setText(String.valueOf(mascota.getLikes()));
 
     }
 

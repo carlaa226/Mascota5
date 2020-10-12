@@ -5,13 +5,14 @@ public class Mascotas {
     private int id;
     private String nombre;
     private int fotomas;
-    /*private int likes;*/
+    private int likes;
 
 
-    public Mascotas(int fotomas,String nombre) {
+    public Mascotas(int fotomas,String nombre,int likes) {
         this.nombre=nombre;
         this.fotomas=fotomas;
-        /*this.likes=likes;*/
+        this.likes=likes;
+
 
 
     }
@@ -32,7 +33,7 @@ public class Mascotas {
         this.fotomas = fotomas;
     }
 
-    /*public int getLikes() {
+   public int getLikes() {
         return likes;
     }
 
@@ -46,5 +47,5 @@ public class Mascotas {
 
     public void setId(int id) {
         this.id = id;
-    }*/
+    }
 }
