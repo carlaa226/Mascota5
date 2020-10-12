@@ -2,13 +2,16 @@ package com.inefop.mascotas;
 
 
 public class Mascotas {
+    private int id;
     private String nombre;
     private int fotomas;
+    private int likes;
 
 
-    public Mascotas(int fotomas,String nombre) {
+    public Mascotas(int fotomas,String nombre,int likes) {
         this.nombre=nombre;
         this.fotomas=fotomas;
+        this.likes=likes;
 
     }
 
@@ -26,5 +29,21 @@ public class Mascotas {
 
     public void setFotomas(int fotomas) {
         this.fotomas = fotomas;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

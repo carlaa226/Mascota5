@@ -3,6 +3,7 @@ package com.inefop.mascotas;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import Pojo.Mascotas;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotasViewHolder>{
 
@@ -28,8 +31,10 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     @Override
     public void onBindViewHolder(@NonNull MascotasViewHolder mascotasViewHolder, int position) {
         Mascotas mascota = mascotas.get(position);
-        mascotasViewHolder.imgFoto.setImageResource(mascota.getFotomas());
+        mascotasViewHolder.imgFotocv.setImageResource(mascota.getFotomas());
         mascotasViewHolder.tvNombremcv.setText(mascota.getNombre());
+        mascotasViewHolder.tvLikes.setText(String.valueOf(mascota.getLikes()));
+
     }
 
     @Override
@@ -39,13 +44,18 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
     public static class MascotasViewHolder extends RecyclerView.ViewHolder{
 
-        private ImageView imgFoto;
+        private ImageView imgFotocv;
         private TextView tvNombremcv;
+        private ImageButton btnLike;
+        private TextView tvLikes;
 
         public MascotasViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgFoto = (ImageView) itemView.findViewById(R.id.imgFotocv);
+            imgFotocv = (ImageView) itemView.findViewById(R.id.imgFotocv);
             tvNombremcv=(TextView) itemView.findViewById(R.id.tvNombrecv);
+            btnLike = (ImageButton) itemView.findViewById(R.id.imghuesolike);
+            tvLikes = (TextView) itemView.findViewById(R.id.tvLikescv);
+
         }
     }
 }
